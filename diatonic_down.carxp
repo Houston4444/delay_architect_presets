@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.4'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>90</BeatsPerMinute>
+ </Transport>
+
+ <!-- LV2 Convolution Stereo -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>LV2 Convolution Stereo</Name>
+   <URI>http://gareus.org/oss/lv2/convoLV2#Stereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Output Gain</Name>
+    <Symbol>gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>http://gareus.org/oss/lv2/convoLV2#state</Key>
+    <Value>
+convolution.ir.gain.0=5,000000e-01
+convolution.ir.delay.0=0
+convolution.ir.channel.0=1
+convolution.source.0=1
+convolution.output.0=1
+convolution.ir.gain.1=5,000000e-01
+convolution.ir.delay.1=0
+convolution.ir.channel.1=1
+convolution.source.1=2
+convolution.output.1=2
+convolution.ir.gain.2=5,000000e-01
+convolution.ir.delay.2=0
+convolution.ir.channel.2=0
+convolution.source.2=0
+convolution.output.2=0
+convolution.ir.gain.3=5,000000e-01
+convolution.ir.delay.3=0
+convolution.ir.channel.3=0
+convolution.source.3=0
+convolution.output.3=0
+convolution.maxsize=1048576
+
+    </Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Path</Type>
+    <Key>http://gareus.org/oss/lv2/convoLV2#impulse</Key>
+    <Value>AC30 normal sm57 neve close_dc.wav</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Delay Architect -->
+ <Plugin>
+  <Info>
+   <Type>VST3</Type>
+   <Name>Delay Architect</Name>
+   <Binary>/usr/lib/vst3/Delay Architect.vst3</Binary>
+   <Label>Delay Architect</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x9</Options>
+
+   <Chunk>
+VkMyIZwHAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PiA8VlNUM1BsdWdpblN0YXRlPjxJQ29tcG9uZW50PjEzODMuM3dZZVd1Q3Bi
+VEVGRy5lU0hFd1ZBTU9QakVNUTdaa0JCMUVtY2RzNllkYmxXbXk3eGhxUkhQaFhrYmF0REF1RXdGUUxmVVpXSmtuRVZvZk1OWi5BcXpsVEpiYXJXUURRS0xG
+eTRydDJZbCtlZWEyOSthMTRPZSszdnI2NWVzMjVNTmIwYWUwcWVpQ3QxVU9uOWtWYjVDTlVVbXphd29kcnlyM1F1OTBXY2NvdmUyNlc1VDBIanEyRUhiQkNC
+N2NXNEV1ZWZia2FSdkkrcisrSDBwN2M0bWUyR1k4SmdiNmZlVDdCQ29oMTg4SzYxRkVqOERPSnBJUHNNNXErN3lNN3Y2MTlxLjBZeDhDUlZzOE43NVo4OHN3
+SUEwQUlhdTV5OVorNDJYaFMwcFNiT1ZydmpGSlJUQWt5cFg3MzRVbWpHdHVtVmtFRnRzK0NPMk80WGxzWTVya2U1RXVqY1ZZUFVsYmt6Q1RrUktDSFcwK2Ez
+dHphWGdJZWtiOThvUTNxMVhpTzlBT24wMWJYaEhlNUU2UnptNlRaK0VhN0haZXRtOHJDbFhEc3Q3ejVSUHE2YlpXYnZLK0NObFl5bjhObUkreDFZano1eFFx
+NkRaT3p0Ui5aY3d6NUJvMGluT3VRemRoM1F6OVdlNmlPWGhRejV3U3FHQXNkeW84M3VhdTY0WGxNbTF5Vzg3MVlqejV3UXEyWFpjZFc2SkFuMENTcUdqVmVo
+OTdtZHA4T3J3aW44bSttS0xYaFF6NXlTcU9Bczl5b2M0TXUwVzRYbE1pMWl0M0c5aDFZano1eVFxK1haTzk4cnFEZlZlTHM5UFpvNUtYRHNDMjh0K3NNZERz
+MjkyV05YaFF6RnZTYS5Bc0FmU3M2VTdZTmxZeU8wZHU2YkU2TFJaQzNuTVhMc0srLjZKQW5NLlNhLmoxUGg5Qm05LmdFTmwzUXo5YWtXZHZEaW5Nam0xUEJa
+Q21TNnZxN2tlaHMrWXpOYnlxRFltUVJhSEdzZ1NkZnZzc3FEZjFQTHNnUFpXU3oyNW9tWk9zaUk5anpkejIrdzZNWGhRenRsbTEweW5jYTlMWk81S2R5MjIx
+KzdTc3hhb3N5SG9jTUdzcUdTNnZHWVdvUXoxWXEuUjZaSHNhSDE2TVNvOFliTHdpTjB0NnBRenRnbTFNRHp0QTdLRFY3TjIyMStMWmUzcUtZbVFSNkZMc21i
+MzdUdm8xTVhaMi5vVVB6bVhKc09vaUlGUnEuUnFmbVZBQXNCRlpFTHpKbm9VdlFxLlJxLlFxLlNxLlJhRFFlUWluMFFxdWZpSUZSYURqMUhkWmlIbk1oZzFI
+Rlppbm9NaGkxSEhzUUhaaXZ6RkFvYzllOWFhOWp1RjZvYkx3UFppZ3pGeVNhTEFzd0x6RnlQYUxNc3diekZDb01GUWFMbDFYSHNJRDhrTDhBQk9zaUlGUmFC
+ajFEZFpTSG5NZ2cxREZaU25vTWdpMURIc0lIWlN2emwub01rbnV6WSszS2FMajFUSHNvN3psUlBhSkNzb0x6bFJTYUpHc29QWlNRemxob01FUnFqbk9JbFZJ
+bFZJalZJT3NSQlprTHpKWW5VUlNxamlWSWpWSWhWSWxWSWoxTGg5eHZ6bGdvTUNSYUZPc1lEemx3UGFGQ3NZenpsd1FhRmoxTERzWVhaeWZ6bFN6V05sMWJM
+czRQWnk0b01tZjFiRlp5WW5NbWwxYk5aeWd6bGluTUdTYU5qMUJoOUp2elZmb3MuUmFBT3NFRHpWdlBhQUNzRXp6VnZRYUFqMUJEc0VYWktmelJzMmtYWkt3
+elZCb3NqbTFSQlpLWW5zamcxUlpaSzRuc0RSYUloMVJMc2tQWnFINXFCU2FFbDFKSHNVN3pWUVBhRUNzVUx6VlFTYUVHc1VQWnFQelZnb3NCUnFobk9FbFZF
+bFZFalZFT3NKQlpVTHpwWG5VUVNxaGlWRWpWRWhWRWxWRWpWTVFlWkxzWkxzWkhzWmRaMER6cFluVXlQcWxsVk1Hc1pIc1pEc1pMc1pIczBEOFVpb3NGU2FN
+ajFaZFpxSW5zbGcxWkZacW9vc2xpMVpIczBIWnF3elZDb3NnbnVGTHNNWFphZnoxdlNhQ0FzTUx6MXZQYUNNc01iejEub3NBUWFDbDFGSHNzRDgwaG9zRVNh
+S2oxVmRaYUluc2tnMVZGWmFvb3NraTFWSHNzSFphd3oxQm9zaW51TkxzY1haNmZ6MXdTYUdBc2NMejF3UGFHTXNjYnoxQW9zQ1FhR2wxTkhzOEQ4MGlvc0dT
+YU9qMWRkWjZJbnNtZzFkRlo2b29zbWkxZEhzOEhaNnd6MU9pMUUrcTlVZ2FJLi4uLi4uLi4uLmZSVU1UUVBJV1oxRUZja1FUWHpFRi5BRGZQNEFXWHlNRy5B
+RHYuLnpBLi4uLi4uLi4uSlUwUEVBa2JvWVdYelVGUWdRV1g8L0lDb21wb25lbnQ+PC9WU1QzUGx1Z2luU3RhdGU+AA==
+   </Chunk>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>firewire_pcm:00130e0401405e32_1394/Out:01 (Mic/Lin/Inst:01)_in</Source>
+   <Target>PulseAudio JACK Source:front-left</Target>
+  </Connection>
+  <Connection>
+   <Source>firewire_pcm:00130e0401405e32_1394/Out:01 (Mic/Lin/Inst:01)_in</Source>
+   <Target>Carla-Multi-Client.0/Delay Architect:input_1</Target>
+  </Connection>
+  <Connection>
+   <Source>firewire_pcm:00130e0401405e32_1394/Out:01 (Mic/Lin/Inst:01)_in</Source>
+   <Target>Carla-Multi-Client.0/Delay Architect:input_2</Target>
+  </Connection>
+  <Connection>
+   <Source>firewire_pcm:00130e0401405e32_1394/Out:02 (Mic/Lin/Inst:02)_in</Source>
+   <Target>PulseAudio JACK Source:front-right</Target>
+  </Connection>
+  <Connection>
+   <Source>PulseAudio JACK Sink:front-left</Source>
+   <Target>firewire_pcm:00130e0401405e32_1394/In:01 (Mixer/In:17)_out</Target>
+  </Connection>
+  <Connection>
+   <Source>PulseAudio JACK Sink:front-right</Source>
+   <Target>firewire_pcm:00130e0401405e32_1394/In:02 (Mixer/In:18)_out</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla-Multi-Client.0/Delay Architect:output_1</Source>
+   <Target>Carla-Multi-Client.0/LV2 Convolution Stereo:InL</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla-Multi-Client.0/Delay Architect:output_2</Source>
+   <Target>Carla-Multi-Client.0/LV2 Convolution Stereo:InR</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla-Multi-Client.0/LV2 Convolution Stereo:OutL</Source>
+   <Target>firewire_pcm:00130e0401405e32_1394/In:01 (Mixer/In:17)_out</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla-Multi-Client.0/LV2 Convolution Stereo:OutR</Source>
+   <Target>firewire_pcm:00130e0401405e32_1394/In:02 (Mixer/In:18)_out</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
